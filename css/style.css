@@ -1,0 +1,86 @@
+:root{
+    --gradient-color-left: #348F50;
+    --gradient-color-right: #56B4D3;
+    --primary-color: #243240;
+    --secondary-color: #112030;
+    --orange-color: #DF7356;
+    --light-color: #E5FAFC;
+    --medium-light-color: #A0C0D6;
+    --blue-color: #42547D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--gradient-color-left), var(--gradient-color-right));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+}
+
+.calculator-container{
+    width: 35rem;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+.calculator-display{
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.previous-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.current-number{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.container-numbers-operators{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 10rem);
+    justify-content: center;
+    align-content: center;
+}
+
+button{
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: var(--light-color);
+    outline: none;
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+button:hover{
+    background-color: var(--blue-color);
+}
+
+.btn-operator{
+    background-color: var(--orange-color);
+}
+
+.span-two{
+    grid-column: span 2;
+}
